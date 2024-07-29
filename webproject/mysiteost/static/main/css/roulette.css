@@ -1,0 +1,76 @@
+/* static/myapp/css/roulette.css */
+
+#roulette-container {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    margin: 50px auto;
+    text-align: center;
+}
+
+#spin-btn {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px 20px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+}
+
+#roulette {
+    width: 200px;
+    height: 200px;
+    position: relative;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.arrow {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 20px solid red;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    transition: transform 2s ease-in-out;
+}
+
+.posts-container {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    transform-origin: 50% 100%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.post {
+    width: 50px;
+    height: 80px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-size: 10px;
+    transform-origin: 50% 100%;
+}
+
+.post h2, .post p {
+    margin: 0;
+    padding: 2px;
+    text-align: center;
+    width: 30px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.post:nth-child(odd) {
+    background-color: #e0e0e0;
+}

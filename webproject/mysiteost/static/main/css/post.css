@@ -1,0 +1,50 @@
+/* post.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('/static/main/img/fon3.jpg') center center fixed;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow-x: hidden;
+}
+
+.post-container {
+    max-width: 540px;
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box; /* Учитывает padding внутри блока */
+}
+
+h1 {
+    text-align: center;
+    margin: 10px 0;
+    font-family: 'Great Vibes', cursive; /* Используем шрифт "Great Vibes" */
+    font-size: 36px; /* Размер шрифта */
+    color: #ff0000; /* Красный цвет текста */
+    text-shadow: 2px 2px 4px #008000; /* Зеленая обводка */
+}
+
+h2, h3, p {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.post-image-container {
+    display: flex;
+    justify-content: center;
+}
+
+.post-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+/* Добавьте любые другие стили, которые вам нужны */

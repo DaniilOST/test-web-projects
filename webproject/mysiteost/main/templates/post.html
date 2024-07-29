@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <link rel="stylesheet" href="{% static 'main/css/post.css' %}"> <!-- Подключаем стили для post.html -->
+
+    <div class="post-container">
+        <h2>{{ p.title }}</h2>
+        <h3>by {{ p.author.name }}</h3>
+
+        <div class="post-image-container">
+            <img class="post-image" src="{{ p.image.url }}" alt="{{ p.title }}">
+        </div>
+
+        <p>{{ p.content }}</p>
+    </div>
+{% endblock %}
+

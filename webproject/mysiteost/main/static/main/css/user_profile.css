@@ -1,0 +1,93 @@
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('/static/main/img/loginfon1.jpg');
+    background-size: cover;
+}
+
+.user-profile-container {
+    max-width: 600px; /* Уменьшаем максимальную ширину контейнера */
+    width: 90%;
+    padding: 30px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    margin-top: 50px;
+    max-height: 600px;
+    overflow-y: auto;
+    position: static; /* Изменено на статичное позиционирование */
+}
+
+.Menu-button, .logout-button {
+    width: 100%;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.Menu-button {
+    background-color: #129c14;
+    color: white;
+}
+
+.Menu-button:hover {
+    background-color: #107e11;
+}
+
+.logout-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.logout-button:hover {
+    background-color: #c82333;
+}
+
+.user-profile-container h2 {
+    margin-bottom: 20px;
+}
+
+.user-profile-container p {
+    margin-bottom: 10px;
+}
+
+.logout-button {
+    margin-bottom: 20px;
+}
+
+.post {
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.post img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Добавленные стили для кнопки "Удалить пост" */
+.post .delete-post-button {
+    background-color: #dc3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.post .delete-post-button:hover {
+    background-color: #c82333;
+}

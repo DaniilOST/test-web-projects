@@ -1,0 +1,45 @@
+<!-- Обновленный HTML -->
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Profile</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'main/css/user_profile.css' %}">
+</head>
+<body>
+    <div class="user-profile-container">
+        <a href="{% url 'posts' %}" class="button Menu-button">Menu</a>
+        <h2>User Profile</h2>
+        <p><strong>Username:</strong> {{ user.author.name }}</p>
+        <p><strong>Email:</strong> {{ user.author.email }}</p>
+
+        <!-- Добавьте блок для отображения постов пользователя -->
+        <h3>User's Posts</h3>
+        {% for post in user.author.post_set.all %}
+            <div class="post">
+                <p>{{ post.title }}</p>
+                <p>{{ post.content }}</p>
+                
+                <!-- Отображение изображения поста -->
+                {% if post.image %}
+                    <img src="{{ post.image.url }}" alt="{{ post.title }} Image">
+                {% endif %}
+
+                <!-- Добавление кнопки "Удалить пост" для авторизованного пользователя -->
+                {% if user.is_authenticated and post.author.user == user %}
+                    <form action="{% url 'delete_post' post_id=post.id %}" method="post">
+                        {% csrf_token %}
+                        <button type="submit" class="delete-post-button">Удалить пост</button>
+                    </form>
+                {% endif %}
+            </div>
+        {% endfor %}
+
+        <a href="{% url 'logout' %}" class="logout-button">Logout</a>
+    </div>
+</body>
+</html>
+
+
